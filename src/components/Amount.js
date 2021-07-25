@@ -1,17 +1,47 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { GlobalContext } from '../contexts/GlobalState';
 
 const Amount = () => {
+    const [amount, setAmount] = useState(0);
+    const { newAmount } = useContext(GlobalContext);
+
+    const handleChange = (e) => {
+        let value = e.target.value;
+        e.target.className === 'slider' ? setAmount(Number(value).toFixed(2)) : setAmount(value);
+        value === '' ? newAmount(0) : newAmount(value);
+    }
+    
+    const handleBlur = (e) => {
+        let value = Number(e.target.value);
+        setAmount(value.toFixed(2));
+    }
+    
     return (
         <div className="Amount section">
             <h4 className="subheading">Amount</h4>
-            <input type="range" min="1" max="150" value="30" className="slider" />
+            <input 
+                type="range" 
+                min="1" 
+                max="150" 
+                value={amount} 
+                onChange={handleChange}
+                className="slider" 
+            /> 
             <div className="textbox-container">
                 <div className="textbox-icon-container left">
                     <div className="textbox-icon">
                         <h3>$</h3>
                     </div>
                 </div>
-                <input className="textbox right" type="number" placeholder="0.00" />
+                <input 
+                    type="number" 
+                    value={amount} 
+                    //onChange ={(e) => setAmount(e.target.value)} 
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    placeholder="0.00" 
+                    className="textbox right"
+                />
             </div>
         </div>
     );
