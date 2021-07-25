@@ -8,6 +8,7 @@ const Amount = () => {
     useEffect(() => {
         setAmount(amount.toFixed(2));
         newAmount(30);
+        // eslint-disable-next-line
     }, []);
 
     const handleChange = (e) => {
