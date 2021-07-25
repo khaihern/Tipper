@@ -19,14 +19,6 @@ const Amount = () => {
     return (
         <div className="Amount section">
             <h4 className="subheading">Amount</h4>
-            <input 
-                type="range" 
-                min="1" 
-                max="150" 
-                value={amount} 
-                onChange={handleChange}
-                className="slider" 
-            /> 
             <div className="textbox-container">
                 <div className="textbox-icon-container left">
                     <div className="textbox-icon">
@@ -43,6 +35,14 @@ const Amount = () => {
                     className="textbox right"
                 />
             </div>
+            <input 
+                type="range" 
+                min="1" 
+                max="150" 
+                value={amount} 
+                onChange={handleChange}
+                className="slider" 
+            /> 
         </div>
     );
 }

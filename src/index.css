@@ -140,7 +140,7 @@ h2.tip-amount{
   -webkit-appearance: none;
   border-radius: 50px;
   background: var(--light-gray);
-  margin-bottom: 12px;
+  margin-top: 12px;
 }
 .slider::-webkit-slider-thumb{
   width: 22px;
