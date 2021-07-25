@@ -99,6 +99,7 @@ h4{ font-weight: 400; }
 /* Banner */
 .banner{
   width: 100%;
+  max-width: 411px;
 }
 
 /* Head */

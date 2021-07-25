@@ -9,7 +9,7 @@ import { GlobalProvider } from './contexts/GlobalState';
 function App() {
   return (
     <div className="App">
-      <img src={Banner} alt="Banner" />
+      <img src={Banner} alt="Banner" className="banner" />
       <div className="side-margin">
         <GlobalProvider>
           <Head />
