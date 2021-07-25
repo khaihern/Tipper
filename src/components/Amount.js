@@ -1,9 +1,14 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { GlobalContext } from '../contexts/GlobalState';
 
 const Amount = () => {
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState(30);
     const { newAmount } = useContext(GlobalContext);
+
+    useEffect(() => {
+        setAmount(amount.toFixed(2));
+        newAmount(30);
+    }, []);
 
     const handleChange = (e) => {
         let value = e.target.value;

@@ -40,7 +40,7 @@ const PartySize = () => {
                             newPartySize(partySize - 1);
                         }
                     }} 
-                    className="textbox-icon-container center"
+                    className="textbox-icon-container center no-select"
                 >
                     <div className="textbox-icon pointer">
                         <h3>-</h3>
@@ -51,7 +51,7 @@ const PartySize = () => {
                         setPartySize(partySize + 1);
                         newPartySize(partySize + 1);
                     }} 
-                    className="textbox-icon-container right"
+                    className="textbox-icon-container right no-select"
                 >
                     <div className="textbox-icon pointer">
                         <h3>+</h3>

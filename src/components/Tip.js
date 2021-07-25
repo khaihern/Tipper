@@ -14,7 +14,7 @@ const Tip = () => {
     return (
         <div className="Tip section">
             <h4 className="subheading">Tip</h4>
-            <div className="tip-options-container">
+            <div className="tip-options-container no-select">
                 <input 
                     type="radio" 
                     id="12%-tip" 
