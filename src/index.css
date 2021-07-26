@@ -1,5 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+/* poppins-regular - latin */
+/* @font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/regular/poppins-400.eot');
+  src: local(''),
+       url('fonts/regular/poppins-400.eot?#iefix') format('embedded-opentype'),
+       url('fonts/regular/poppins-400.woff') format('woff'),
+       url('fonts/regular/poppins-400.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/medium/poppins-500.eot');
+  src: local(''),
+       url('fonts/medium/poppins-500.eot?#iefix') format('embedded-opentype'),
+       url('fonts/medium/poppins-500.woff') format('woff'),
+       url('fonts/medium/poppins-500.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./fonts/semibold/poppins-600.eot');
+  src: local(''),
+       url('fonts/semibold/poppins-600.eot?#iefix') format('embedded-opentype'),
+       url('fonts/semibold/poppins-600.woff') format('woff'),
+       url('fonts/semibold/poppins-600.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/bold/poppins-700.eot'); 
+  src: local(''),
+       url('fonts/bold/poppins-700.eot?#iefix') format('embedded-opentype'),
+       url('fonts/bold/poppins-700.woff') format('woff'),
+       url('fonts/bold/poppins-700.ttf') format('truetype');
+} */
+
 *{
   margin: 0;
   padding: 0;
