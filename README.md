@@ -29,7 +29,7 @@ I built this web app using ReactJs and this project was also bootstrapped with [
 
 ## Contribute
 
-If you found a bug, or want to suggest new features, please use the [issues tab](https://github.com/khaihern/tipper/issues). If you want to help with the code or add a new addon, fork this repository, and then create a [pull request](https://github.com/khaihern/tipper/pulls).
+If you found a bug, or want to suggest new features, please use the [issues tab](https://github.com/khaihern/tipper/issues). If you want to help with the code, fork this repository, and then create a [pull request](https://github.com/khaihern/tipper/pulls).
 
 ## License
 
