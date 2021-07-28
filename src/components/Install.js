@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Cancel from './../images/cancel.svg';
 
 let deferredPrompt;
+let initialLoad = true; 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
 const Install = () => {
@@ -21,10 +22,13 @@ const Install = () => {
         }
 
         window.addEventListener("beforeinstallprompt", async (e) => {
-          e.preventDefault();
-          deferredPrompt = e;
-          await delay(3000);
-          setInstallable(true);
+            e.preventDefault();
+            deferredPrompt = e;
+            if (initialLoad) {
+                await delay(3000);
+                initialLoad = false;
+            }
+            setInstallable(true);
         });
     
         window.addEventListener('appinstalled', () => {
