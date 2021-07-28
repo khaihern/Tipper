@@ -1,4 +1,5 @@
 import Banner from './images/Banner.svg';
+import Install from './components/Install';
 import Head from './components/Head';
 import Overview from './components/Overview';
 import Amount from './components/Amount';
@@ -9,6 +10,7 @@ import { GlobalProvider } from './contexts/GlobalState';
 function App() {
   return (
     <div className="App">
+      <Install />
       <img src={Banner} alt="Banner" className="banner" />
       <div className="side-margin">
         <GlobalProvider>

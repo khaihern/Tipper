@@ -1,25 +1,26 @@
-const CACHE_NAME = 'tipper-v2';
+const CACHE_NAME = 'tipper-v4';
 
 const appShellFiles = [
-    './',
-    './../src/',
-    './../src/index.js',
-    './../src/index.css',
-    './../src/App.js',
+    '/',
+    '/src/',
+    '/src/index.js',
+    '/src/index.css',
+    '/src/App.js',
 
-    './../src/images/',
-    './../src/images/Banner.svg',
+    '/src/images/',
+    '/src/images/Banner.svg',
 
-    './../src/contexts/',
-    './../src/contexts/AppReducer.js',
-    './../src/contexts/GlobalState.js',
+    '/src/contexts/',
+    '/src/contexts/AppReducer.js',
+    '/src/contexts/GlobalState.js',
 
-    './../src/components/',
-    './../src/components/Amount.js',
-    './../src/components/Head.js',
-    './../src/components/Overview.js',
-    './../src/components/PartySize.js',
-    './../src/Tip.js',
+    '/src/components/',
+    '/src/components/Amount.js',
+    '/src/components/Head.js',
+    '/src/components/Overview.js',
+    '/src/components/PartySize.js',
+    '/src/components/Tip.js',
+    '/src/components/Install.js',
     
     // Fonts 
     // './../src/fonts/regular/poppins-400.eot',
@@ -38,14 +39,14 @@ const appShellFiles = [
     // './../src/fonts/bold/poppins-700.ttf',
     // './../src/fonts/bold/poppins-700.woff',
 
-    './images/logo-app.png',
-    './images/logo-fav.png',
-    './manifest.json',
-    './static/media/Banner.853ce5e9.svg',
+    '/images/logo-app.png',
+    '/images/logo-fav.png',
+    '/manifest.json',
+    '/static/media/Banner.853ce5e9.svg',
 
-    './static/js/bundle.js',
-    './static/js/main.chunk.js',
-    './static/js/vendors~main.chunk.js'
+    '/static/js/bundle.js',
+    '/static/js/main.chunk.js',
+    '/static/js/vendors~main.chunk.js'
 ];
 
 const contentToCache = appShellFiles;
@@ -54,11 +55,22 @@ const self = this;
 
 // Installing Service Worker
 self.addEventListener('install', (e) => {
-    console.log('[Service Worker] Install');
+    // console.log('[Service Worker] Install');
     e.waitUntil((async () => {
-      const cache = await caches.open(CACHE_NAME);
-      console.log('[Service Worker] Caching all: app shell and content');
-      await cache.addAll(contentToCache);
+        const cache = await caches.open(CACHE_NAME);
+        // console.log('[Service Worker] Caching all: app shell and content');
+        // cache.addAll(contentToCache)
+        //     .then(() => console.log('Cache Successful'))
+        //     .catch((err) => console.log(`Cache Failed, Error: ${err}`));
+
+        appShellFiles.map(url => {
+            cache.add(url).then(() => {
+                //console.log(`Successfully cached ${url}`);
+            }).catch(err => {
+                //console.log(`Failed to cache ${url} | Error: ${String(err)}`);
+                return;
+            });
+        })
     })());
 });
 
@@ -66,14 +78,14 @@ self.addEventListener('install', (e) => {
 self.addEventListener('fetch', (e) => {
     if (!(e.request.url.indexOf('http') === 0)) return;
     e.respondWith((async () => {
-      const r = await caches.match(e.request);
-      console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
-      if (r) return r;
-      const response = await fetch(e.request);
-      const cache = await caches.open(CACHE_NAME);
-      console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
-      cache.put(e.request, response.clone());
-      return response;
+        const r = await caches.match(e.request);
+        // console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
+        if (r) return r;
+        const response = await fetch(e.request);
+        const cache = await caches.open(CACHE_NAME);
+        // console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
+        cache.put(e.request, response.clone());
+        return response;
     })());
 });
 

@@ -55,6 +55,7 @@
 
 :root{
   --green: #13AA52;
+  --dark-green: #116149;
   --dark-gray: #24292E;
   --medium-gray: #586069;
   --light-gray: #C4C4C4;
@@ -148,6 +149,35 @@ h4{ font-weight: 400; }
        -moz-user-select: none; /* Old versions of Firefox */
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Install */
+.install-background{
+  background-color: var(--dark-green);
+}
+.install-container{
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.install-cancel{
+  cursor: pointer;
+}
+.install-message{
+  width: 230px;
+  color: var(--white);
+  font-size: 14px;
+  line-height: 105%;
+}
+.install-button{
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--dark-green);
+  padding: 5px 10px;
+  background-color: var(--white);
+  border-radius: 50px;
+  cursor: pointer;
 }
 
 /* Banner */
