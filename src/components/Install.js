@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Cancel from './../images/cancel.svg';
 
 let deferredPrompt;
-let initialLoad = true; 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
 const Install = () => {
@@ -24,9 +23,9 @@ const Install = () => {
         window.addEventListener("beforeinstallprompt", async (e) => {
             e.preventDefault();
             deferredPrompt = e;
-            if (initialLoad) {
+            if (sessionStorage.getItem('initialLoad') === null) {
                 await delay(3000);
-                initialLoad = false;
+                sessionStorage.setItem('initialLoad', 'false');
             }
             setInstallable(true);
         });
