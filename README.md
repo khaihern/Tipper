@@ -2,7 +2,7 @@
 # Welcome to Tipper's repository!
 
 [![](https://img.shields.io/badge/license-GPL--3.0-blue)](https://github.com/khaihern/tipper/blob/master/LICENSE)
-[![](https://img.shields.io/badge/discuss-on%20github-black)]()
+[![](https://img.shields.io/badge/discuss-on%20github-black)](https://github.com/khaihern/tipper/discussions)
 [![](https://img.shields.io/badge/website-kh--tipper.netlify.app-brightgreen)](https://kh-tipper.netlify.app)
 
 ## About
