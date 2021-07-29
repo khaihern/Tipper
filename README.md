@@ -14,7 +14,7 @@ Tipper is a simple and easy to use tip calculator to help users calculate tips a
 1. A slider can be used so there is no need to type out the amount
 2. 5 built in tip percentages options allows for faster calculations 
 3. Split the cost among multiple parties
-4. All calculations can be done without the need the use of a keypad
+4. All calculations can be done without the need to use a keypad
 5. Calculator can be used offline without an internet connection after the web app is downloaded
 
 ## How to get it?
