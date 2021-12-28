@@ -25,7 +25,7 @@ After a few seconds, there will be a pop-up allowing you to download the web app
 
 ## How and why I built this web app?
 
-I built this web app using ReactJS and this project was also bootstrapped with [Create React App](https://github.com/facebook/create-react-app). I built this app as a way to practice my newly learned ReactJS skills after 2 weeks into learning the framework. This app gave me an opportunity to explore many ReactJS features (hooks, reducers, contexts, etc.), Service Worker, and how to build a Progressive Web App.
+I built this web app using ReactJS bootstrapped with [Create React App](https://github.com/facebook/create-react-app). I built it as a way to practice my newly learned ReactJS skills after 2 weeks into learning the framework. This app gave me an opportunity to explore many ReactJS features (hooks, reducers, contexts, etc.), Service Worker, and how to build a Progressive Web App (PWA).
 
 ## Contribute
 
