@@ -9,6 +9,8 @@
 
 Tipper is a simple and easy to use tip calculator to help users calculate tips and split costs among multiple parties. This Tipper version is an upgrade from [Version 1](https://tip-calculator-v1--khai_hernhern.repl.co/) with completely new designs and colors. 
 
+<img src="https://i.ibb.co/JxJtn0T/Desktop-1.png" alt="tipper-screenshot" align="left"></img>
+&nbsp;
 ### What are the features?
 
 1. A slider can be used so there is no need to type out the amount
